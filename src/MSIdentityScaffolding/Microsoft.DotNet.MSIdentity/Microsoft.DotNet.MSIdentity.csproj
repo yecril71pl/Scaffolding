@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
@@ -25,14 +25,20 @@
   <Import Project="$(RepoRoot)eng\Versions.MSIdentity.props" />
   
   <ItemGroup>
-    <PackageReference Include="Azure.Identity" Version="$(AzureIdentityVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="$(MicrosoftExtensionsConfigurationVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="$(MicrosoftExtensionsConfigurationBinderVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="$(MicrosoftExtensionsConfigurationCommandLineVersion)" />
-    <PackageReference Include="Microsoft.Graph" Version="$(MicrosoftGraphVersion)" />
-    <PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" Version="$(MicrosoftIdentityClientExtensionsMsalVersion)" />
+    <PackageReference Include="Azure.Identity" PrivateAssets="All" Version="$(AzureIdentityVersion)" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" PrivateAssets="All" Version="$(MicrosoftExtensionsConfigurationVersion)" />
+    <PackageReference Include="Microsoft.Graph" PrivateAssets="All" Version="$(MicrosoftGraphVersion)" />
+    <PackageReference Include="Microsoft.Identity.Client.Extensions.Msal" PrivateAssets="All" Version="$(MicrosoftIdentityClientExtensionsMsalVersion)" />
+    <PackageReference Include="Newtonsoft.Json" PrivateAssets="All" Version="$(NewtonsoftJsonMsIdentityPackageVersion)" />
+    <PackageReference Include="NuGet.ProjectModel" PrivateAssets="All" Version="$(NuGetProjectModelVersion)" />
     <PackageReference Include="System.Text.Json" Version="$(SystemTextJsonVersion)" />
-    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonMsIdentityPackageVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Features" PrivateAssets="All" Version="$(CodeAnalysisVersion)" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Workspaces.MSBuild"  PrivateAssets="All" Version="$(CodeAnalysisVersion)" />
+    <PackageReference Include="Microsoft.Build" PrivateAssets="All" Version="$(MicrosoftBuildPackageVersion)" />
+    <PackageReference Include="Microsoft.Build.Tasks.Core" PrivateAssets="All" Version="$(MicrosoftBuildPackageVersion)" />
   </ItemGroup>
 
   <ItemGroup>

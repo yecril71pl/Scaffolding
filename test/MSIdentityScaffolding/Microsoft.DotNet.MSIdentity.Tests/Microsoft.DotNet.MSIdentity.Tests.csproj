@@ -19,6 +19,8 @@
   <ItemGroup>
     <ProjectReference Include="$(RepoRoot)\src\MSIdentityScaffolding\Microsoft.DotNet.MSIdentity\Microsoft.DotNet.MSIdentity.csproj" />
     <ProjectReference Include="$(RepoRoot)\tools\dotnet-msidentity\dotnet-msidentity.csproj" />
+    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonMsIdentityPackageVersion)" />
+    <PackageReference Include="NuGet.ProjectModel" Version="$(NuGetProjectModelVersion)" />
   </ItemGroup>
 
 </Project>

@@ -8,7 +8,7 @@ set SRC_DIR=%cd%
 call taskkill /f /im dotnet.exe
 call rd /Q /S artifacts
 
-call build
+call dotnet pack MSIdentityScaffolding.slnf
 call dotnet tool uninstall -g Microsoft.dotnet-msidentity
 call cd %DEFAULT_NUPKG_PATH%
 call C:
