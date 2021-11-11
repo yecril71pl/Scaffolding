@@ -37,6 +37,7 @@
 
   <ItemGroup>
     <ProjectReference Include="$(RepoRoot)\src\Shared\Microsoft.DotNet.Scaffolding.Shared\Microsoft.DotNet.Scaffolding.Shared.csproj" />
+    <ProjectReference Include="$(RepoRoot)\src\Shared\Microsoft.Dotnet.Scaffolding.CodeModifiers\Microsoft.Dotnet.Scaffolding.CodeModifiers.csproj" />
     <Folder Include="Resources\" />
   </ItemGroup>
 
